@@ -1,0 +1,97 @@
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 20px;">
+    <header style="border-bottom: 3px solid #007BA6; padding-bottom: 10px; margin-bottom: 30px; background-color: #eef7fa; padding: 20px; border-radius: 8px; border: 1px solid #007BA6;">
+        <h1 style="color: #007ba6; margin: 0; font-size: 22pt;">Week 6: Smart Infrastructures &amp; Global Networks</h1>
+        <p style="color: #00796b; font-weight: bold; font-style: italic; margin-top: 5px;">Instruction: Complete this final pre-learning module and configure the network node routes in the simulator. (Est. Time: 25 mins)</p>
+    </header>
+    
+    <section style="margin-bottom: 40px;">
+        <h2 style="color: #007ba6;">1. Watch &amp; Learn</h2>
+        <p style="color: #00796b;">Instruction: Watch the introductory video below. Pay close attention to how everyday physical hardware items communicate automatically using cloud storage data streams[cite: 197, 250, 258].</p>
+        <div style="background-color: #f9f9f9; border: 2px dashed #ccc; padding: 40px; text-align: center; border-radius: 8px;">
+            <p style="color: #666;">[PASTE YOUR CANVAS STUDIO EMBED CODE HERE]</p>
+        </div>
+    </section>
+    
+    <section style="margin-bottom: 40px;">
+        <h2 style="color: #007ba6;">2. Key Concepts</h2>
+        <p>Up until now, we have looked at how individual humans communicate digitally[cite: 221]. However, the future workplace relies heavily on how automated hardware units talk directly to other hardware units across wide-scale geographical boundaries[cite: 176, 177, 222].</p>
+        <p>This network of physical electronics embedded with software, sensors, and actuators is known as the <strong style="color: #c62828;">Internet of Things (IoT)</strong>[cite: 223, 248, 250, 262]. By gathering, transmitting, and receiving metadata, these machines form a <strong>Smart Infrastructure</strong> that can handle massive logistical tasks without human delay[cite: 254, 255, 264]. For example, automated transport systems scan real-time traffic grids to re-route driverless delivery fleet layers instantly[cite: 177, 181].</p>
+        
+        <div style="background-color: #e0f2f1; padding: 20px; border-radius: 8px; border-left: 5px solid #00796B; margin: 20px 0;">
+            <h4 style="margin-top: 0; color: #00796b;">Evaluating Network Risks and Bandwidth</h4>
+            <p>While an interconnected world brings huge efficiency improvements, it introduces massive security dependencies[cite: 223]. If a single critical data routing node encounters a data traffic bottleneck or a cyber breach, entire corporate supply lines can halt[cite: 177, 214]. Understanding how data packets travel over distance is key to configuring resilient future platforms[cite: 257, 259].</p>
+        </div>
+    </section>
+
+    <section style="margin-bottom: 40px; background-color: #1e293b; color: #f8fafc; padding: 25px; border-radius: 12px; border: 2px solid #38bdf8;">
+        <h2 style="color: #38bdf8; margin-top: 0;">3. Interactive Tool: Smart Grid Traffic Simulator</h2>
+        <p style="color: #94a3b8;">Instruction: You are an Infrastructure Engineer managing a smart eco-city grid[cite: 177, 181]. An emergency vehicle needs an immediate data clear-path across the network nodes[cite: 177, 257]. Select a routing layout path to test its network latency.</p>
+        
+        <div style="background-color: #0f172a; border: 1px solid #334155; padding: 15px; border-radius: 6px; margin-bottom: 20px;">
+            <p style="margin: 0; font-weight: bold; color: #e2e8f0;">Active Data Load Alert:</p>
+            <p style="margin: 5px 0 0 0; color: #94a3b8;"><em>"Node Alpha (City Centre Sensors) is experiencing high data streaming congestion[cite: 264, 265]. Select an alternate pipeline track to bypass the bottleneck safely."</em></p>
+        </div>
+
+        <div style="margin-bottom: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <button onclick="simulateNetwork('path_alpha')" style="background-color: #0284c7; color: white; border: none; padding: 10px 14px; font-weight: bold; border-radius: 4px; cursor: pointer;">Route 1: Via Central Hub (Node Alpha)</button>
+            <button onclick="simulateNetwork('path_beta')" style="background-color: #0284c7; color: white; border: none; padding: 10px 14px; font-weight: bold; border-radius: 4px; cursor: pointer;">Route 2: Bypass Track (Nodes Delta &amp; Gamma)</button>
+            <button onclick="simulateNetwork('path_gamma')" style="background-color: #0284c7; color: white; border: none; padding: 10px 14px; font-weight: bold; border-radius: 4px; cursor: pointer;">Route 3: Low-Bandwidth Satellite Link</button>
+        </div>
+
+        <div id="networkFeedbackBox" style="background-color: #334155; border: 2px dashed #475569; padding: 15px; border-radius: 6px; min-height: 80px; transition: all 0.3s ease;">
+            <p style="text-align: center; color: #94a3b8; font-style: italic; margin-top: 15px;">Click a route above to execute the data transmission test across the network infrastructure[cite: 257].</p>
+        </div>
+
+        <script>
+            function simulateNetwork(route) {
+                var box = document.getElementById('networkFeedbackBox');
+                if (route === 'path_alpha') {
+                    box.style.border = "2px solid #ef4444";
+                    box.style.backgroundColor = "#451a03";
+                    box.innerHTML = "<h4 style='color: #f87171; margin-top: 0;'>⚠️ Infrastructure Bottleneck: Critical Delay</h4>" +
+                                    "<p style='margin: 0; color: #fca5a5;'><strong>Result:</strong> Data packet delivery stalled! Forcing high-priority data through a congested metadata processing node caused a system crash[cite: 254]. The smart vehicles lost telemetry synchronization.</p>";
+                } else if (route === 'path_beta') {
+                    box.style.border = "2px solid #10b981";
+                    box.style.backgroundColor = "#064e3b";
+                    box.innerHTML = "<h4 style='color: #34d399; margin-top: 0;'>🎯 Optimal Routing: 0ms Latency Match</h4>" +
+                                    "<p style='margin: 0; color: #a7f3d0;'><strong>Result:</strong> Transmission successful! Bypassing the central node using distributed routing channels (Delta & Gamma) allowed smooth data streaming[cite: 264]. Traffic grid updated automatically[cite: 177, 181].</p>";
+                } else if (route === 'path_gamma') {
+                    box.style.border = "2px solid #f59e0b";
+                    box.style.backgroundColor = "#78350f";
+                    box.innerHTML = "<h4 style='color: #fbbf24; margin-top: 0;'>⚠️ Limited Bandwidth: Intermittent Dropouts</h4>" +
+                                    "<p style='margin: 0; color: #fde68a;'><strong>Result:</strong> Transmission incomplete. While the route avoided the hacker risk profile, the satellite channel doesn't have the packet stream capacity required for a high-intensity smart transport grid[cite: 223, 264].</p>";
+                }
+            }
+        </script>
+    </section>
+    
+    <section style="margin-bottom: 40px;">
+        <h2 style="color: #007ba6;">4. Quick Mastery Check</h2>
+        <p style="color: #00796b;">Instruction: Click the questions below to reveal the hidden technical answers and double-check your infrastructure concepts.</p>
+        
+        <div style="margin-bottom: 10px;">
+            <details style="background: #fff; border: 1px solid #007BA6; border-radius: 4px; padding: 10px; cursor: pointer;">
+                <summary style="font-weight: bold; color: #007ba6;">Why does a smart infrastructure rely on metadata instead of normal body text files[cite: 242, 254]?</summary>
+                <p style="padding-top: 10px; border-top: 1px solid #eee;">Machines do not read paragraphs like humans do. They require tiny, highly organized data markers—like timestamp coordinates, machine asset numbers, and sensor reading data profiles[cite: 254, 255]. This <strong>metadata</strong> is incredibly small, allowing networks to process billions of automated machine checks per second without overloading the bandwidth[cite: 254, 257].</p>
+            </details>
+        </div>
+        
+        <div style="margin-bottom: 10px;">
+            <details style="background: #fff; border: 1px solid #007BA6; border-radius: 4px; padding: 10px; cursor: pointer;">
+                <summary style="font-weight: bold; color: #007ba6;">What is a 'disruptive technology' in the context of city grids or global industries[cite: 245, 246]?</summary>
+                <p style="padding-top: 10px; border-top: 1px solid #eee;">A <strong>disruptive innovation</strong> completely shatters and replaces the old way an industry operates[cite: 245]. For example, when an autonomous electric fleet system replaces traditional delivery vans, it disrupts gasoline logistics, alters vehicle licensing structures, and fundamentally shifts the skills workers need to operate[cite: 222, 245, 246].</p>
+            </details>
+        </div>
+    </section>
+    
+    <section style="background-color: #eef7fa; padding: 25px; border-radius: 8px; border: 2px solid #007BA6;">
+        <h2 style="color: #007ba6; margin-top: 0;">5. The Capstone Preparation</h2>
+        <p style="color: #00796b; font-weight: bold;">Instruction: Read the brief below carefully. This forms the blueprint for your final live assessment session.</p>
+        <p>In our live lesson, we are launching the **Smart City Enterprise Capstone Pitch**. You will work in technical groups to design a cohesive, sustainable smart infrastructure system combining every master tool covered this year[cite: 177, 198]:</p>
+        <ul style="margin-bottom: 0;">
+            <li><strong>The Connected Node Profile:</strong> Your system must use IoT automated sensor feedback tracks[cite: 223, 250].</li>
+            <li><strong>The Security Lock:</strong> You must design user permission structures to defend nodes against unauthorized access[cite: 214].</li>
+            <li><strong>The Brand Architecture:</strong> The entire corporate presentation layout must enforce a strict, un-drifted visual identity kit[cite: 211].</li>
+        </ul>
+    </section>
+</div>
